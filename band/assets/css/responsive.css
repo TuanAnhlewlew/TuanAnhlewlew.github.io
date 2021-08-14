@@ -1,0 +1,95 @@
+/* PC */
+@media(min-width:64em){
+    
+}
+
+/* tablet and Mobile */
+@media(max-width:63.9375em){
+    .btn{
+        padding: 14px 16px;
+        -webkit-appearance: none;
+    }
+    .contact-box .message .input{
+        padding: 15px 12px;
+    }
+    #footer .f-icon{
+        letter-spacing: 6px;
+        font-size: 36px;
+    }
+    #nav .sub-nav a{
+        padding: 2px 12px;
+    }
+    .contact-box .info{
+        line-height: 2;
+    }
+}
+/* tablet */
+@media(min-width:46.25em) and (max-width:63.9375em){
+    
+}
+/* mobile */
+@media(max-width:46.1875em){
+    .mobile-full{
+        width: 100%;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #header #nav li a{
+        display: block;
+    }
+    #header .search{
+        display: none;
+    }
+    #header .menu{
+        display: block;
+    }
+    #header #nav{
+        display: block;
+    }
+    #nav>li:first-child{
+        display: inline-block;
+    }
+    #nav>li:first-child a{
+        padding-right: 24px;
+    }
+    #nav>li{
+        display: block;
+    }
+
+    #nav .sub-nav{
+        position: initial;
+    }
+    #nav li:hover .sub-nav{
+        background-color:#333;
+        color: #fff;
+    }
+    #nav .sub-nav a{
+        color: #fff;
+        padding: 2px 64px;
+    }
+
+    .member-list .member-item{
+        float: initial;
+        margin: 0 auto;
+        width: auto;
+    }
+    #slider .text{
+        bottom: 40%;
+    }
+    #slider .text-head{
+        font-size: 30px;
+    }
+    #slider .text-tail{
+        display: none;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    .contact-box .info{
+        width: 100%;
+    }
+    
+}
