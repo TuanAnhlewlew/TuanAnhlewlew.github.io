@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="web">
+        <div class="header">
+            <div class="grid">
+                <div class="navbar">
+                    <ul class="navbar-list">
+                        <li class="navbar-item download text-fade border-right">
+                            <p>Cài đặt ứng dụng trong cửa hàng</p> 
+                            <div class="qr-code">
+                                <img src="/assets/img/QR_code/download_app.png" alt="QR code" width="160px" >
+                                <div class="qr-code__icon">
+                                    <i class="fab fa-google-play">Google Play</i>
+                                    <i class="fab fa-app-store-ios">App Store</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navbar-item">
+                            <p>
+                                Kết nối
+                                <a class="text-decor-none color-white" href="http://www.facebook.com"><i class="fab pd-left-8 fa-facebook-f"></i></a>
+                                <a class="text-decor-none color-white" href="https://www.instagram.com/"><i class="fab pd-left-8 fa-instagram"></i></a>
+                            </p> 
+                        </li>
+                    </ul>
+                    <ul class="navbar-list">
+                        <li class="navbar-item notification text-fade">
+                            <p>
+                                <a href="" class="navbar-item__link"><i class="fas pd-right-8 fa-bell"></i>Thông báo</a>
+                                <header class="header__noti">
+                                    <div class="arrow-up"></div>
+                                    <h3 class="header__noti-head">Thông báo mới nhất</h3>
+                                    <ul class="header__noti-list">
+                                        <!-- demo notifications -->
+                                        <li class="header__noti-item">
+                                            <a href="" class="header__noti-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__noti-info">
+                                                    <span class="header__noti-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                    <span class="header__noti-desc">
+                                                        Con mèo ngu ngốc đáng yêu ngọt ngào
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__noti-item unseen">
+                                            <a href="" class="header__noti-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__noti-info">
+                                                    <span class="header__noti-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                    <span class="header__noti-desc">
+                                                        Con mèo ngu ngốc đáng yêu ngọt ngào
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__noti-item">
+                                            <a href="" class="header__noti-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__noti-info">
+                                                    <span class="header__noti-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                    <span class="header__noti-desc">
+                                                        Con mèo ngu ngốc đáng yêu ngọt ngào
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="" class="header__noti-footer">
+                                        Xem tất cả
+                                    </a>
+                                </header>
+                            </p>
+                        </li>
+                        <li class="navbar-item text-fade">
+                            <p>
+                                <a href="" class="navbar-item__link"><i class="fas pd-right-8 fa-question-circle"></i>Trợ giúp</a>
+                            </p>
+                            </li>
+                        <li onclick="open_modal({type:'signin'})" class="navbar-item text-fade navbar-item__text-bold  border-right js-signin"><p>Đăng ký</p></li>
+                        <li onclick="open_modal({type:'login'})" class="navbar-item text-fade navbar-item__text-bold js-login"><p>Đăng nhập</p></li>
+                    </ul>
+                </div>
+                <div class="header-body">
+                    <a class="header-logo" href="#"><img src="/assets/img/logo/ecommerce.png" width="70px" alt=""></a>
+                    <div class="header-search">
+                        <div class="header-search-controll">
+                            <input type="text" class="search-input" placeholder="Search..." tabindex="-1"> 
+                            <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> 
+                        </div>
+                        <div class="header-search-history">
+                            <ul class="history-list">
+                                <li class="history-item">
+                                    <a href="">History search item 1</a>
+                                </li>
+                                <li class="history-item">
+                                    <a href="">History search item 2</a>
+                                </li>
+                                <li class="history-item">
+                                    <a href="">History search item 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shopping-cart">
+                        <i class="fas fa-cart-arrow-down cart-icon">
+                            <div class="cart-nums">
+                                30
+                            </div>
+                        </i>
+                        <header class="header__cart">
+                                    <div class="arrow-up"></div>
+                                    <h3 class="header__cart-head">Sản Phẩm Mới Thêm</h3>
+                                    <ul class="header__cart-list">
+                                        <!-- demo cart -->
+                                        <li class="header__cart-item">
+                                            <a href="" class="header__cart-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__cart-info">
+                                                    <span class="header__cart-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                </div>
+                                                <div class="header__cart-price">
+                                                    đ123.000 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__cart-item">
+                                            <a href="" class="header__cart-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__cart-info">
+                                                    <span class="header__cart-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                </div>
+                                                <div class="header__cart-price">
+                                                    đ123.000 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__cart-item">
+                                            <a href="" class="header__cart-link">
+                                                <img src="/assets/img/notification/noti_1.jpg" alt="img" width="40px" class="header__noti-img">
+                                                <div class="header__cart-info">
+                                                    <span class="header__cart-title">
+                                                        Mua ngay con mèo ngu này với giá phải chăng chỉ với giá 10 xu
+                                                    </span>
+                                                </div>
+                                                <div class="header__cart-price">
+                                                    đ123.000 
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="header__cart-footer">
+                                        <p>Xem thêm trong giỏ hàng</p>
+                                        <a href="">
+                                            Xem Giỏ Hàng
+                                        </a>
+                                    </div>
+                                </header>
+                    </div>
+                </div>
+                <div class="header-search-suggestions">
+                    <a href="" class="suggestions-item">Chó</a>
+                    <a href="" class="suggestions-item">Mèo</a>
+                    <a href="" class="suggestions-item">Điện thoại</a>
+                    <a href="" class="suggestions-item">Quần áo</a>
+                    <a href="" class="suggestions-item">Váy</a>
+                    <a href="" class="suggestions-item">Gia dụng</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    <div class="modal js-modal dp-none ">
+        <div class="modal-container js-modal-container">
+            <!-- login -->
+            <div class="modal-container__login js-login-modal dp-none">
+                <div class="modal__header pd-left-right-24">
+                    <h2>Đăng Nhập</h2>
+                    <p onclick="open_modal({type:'signin'})" class="switch-tab">Đăng ký</p>
+                </div>
+                <form action="">
+                    <div class="modal-info pd-left-right-24">
+                        <input type="text" class=" input-info login-id" placeholder="Email/Số Điện thọai/Tên đăng nhập">
+                        <input type="password" class=" input-info login-pass" placeholder="Mật khẩu"> 
+                    </div>
+                    <div class="login-assistant pd-left-right-24">
+                        <a href="" class="forgot-pass">Quên Mật Khẩu</a>
+                        <a href="" class="need-help">Cần trợ giúp?</a>
+                    </div>
+                    <div class="modal-submit pd-left-right-24">
+                        <button onclick="close_modal();return false;" class="close-or-submit close-btn">TRỞ LẠI</button>
+                        <input type="submit" class="close-or-submit submit-btn" value="ĐĂNG NHẬP">
+                    </div>
+                </form>
+                <div class="modal-option pd-left-right-24 three-option">
+                    <button class="modal-option__btn modal-option__butn--sms">
+                        <i class="fas fa-comment-dots"></i>
+                        <p>SMS</p>
+                    </button>
+                    <button class="modal-option__btn modal-option__butn--facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <p>Facebook</p>
+                    </button>
+                    <button class="modal-option__btn modal-option__butn--google">
+                        <i class="fab fa-google"></i>
+                        <p>Google</p>
+                    </button>
+                </div>
+            </div>
+            <!-- sign in -->
+            <div class="modal-container__signin js-signin-modal dp-none">
+                <div class="modal__header pd-left-right-24">
+                    <h2>Đăng Ký</h2>
+                    <p onclick="open_modal({type:'login'})" class="switch-tab">Đăng nhập</p>
+                </div>
+                <form action="">
+                    <div class="modal-info pd-left-right-24">
+                        <input type="text" class=" input-info login-id" placeholder="Số điện thoại">
+                        <div class="two-box">
+                            <input type="text" class=" input-info input-captcha" placeholder="Nhập mã ngẫu nhiên/mã hiển thị ở bên phải">
+                            <div class="captcha input-info"><img src="/assets/img/captcha/captcha.png" alt="captcha" height="22px"></div>
+                        </div>
+                        <div class="two-box">
+                            <input type="text" class=" input-info input-verify" placeholder="Mã xác minh">
+                            <input class="verify input-info" type="submit" value="Gửi Mã xác minh"></input>
+                        </div>
+                    </div>
+                    <div class="modal-policy pd-left-right-24">
+                        <p>Bằng việc đăng ký, bạn đã đồng ý với E-commerce về <a href="">Điều khoản dịch vụ</a> & <a href="">Chính sách bảo mật</a></p>
+                    </div>
+                    <div class="modal-submit pd-left-right-24">
+                        <button onclick="close_modal();return false;" class="close-or-submit close-btn">TRỞ LẠI</button>
+                        <input type="submit" class="close-or-submit submit-btn" value="ĐĂNG KÝ">
+                    </div>
+                </form>
+                <div class="modal-option pd-left-right-24 two-option">
+                    <button class="modal-option__btn modal-option__butn--facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <p>Facebook</p>
+                    </button>
+                    <button class="modal-option__btn modal-option__butn--google">
+                        <i class="fab fa-google"></i>
+                        <p>Google</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- open-close modal -->
+    <script>
+        const modal=document.querySelector(".js-modal")
+        const login_modal=document.querySelector(".js-login-modal")
+        const signin_modal=document.querySelector(".js-signin-modal")
+        const modal_container=document.querySelector(".js-modal-container")
+        // open modal
+        function open_modal({type=""}){
+            if(type=="login"){
+                modal.classList.remove('dp-none')
+                signin_modal.classList.add('dp-none')
+                login_modal.classList.remove('dp-none')
+            }
+            if(type=="signin"){
+                modal.classList.remove('dp-none')
+                login_modal.classList.add('dp-none')
+                signin_modal.classList.remove('dp-none')
+            }
+        }
+        // close modal
+        function close_modal(){
+            modal.classList.add('dp-none')
+            login_modal.classList.add('dp-none')
+            signin_modal.classList.add('dp-none')
+        }
+        modal.addEventListener('click',close_modal)
+        modal_container.addEventListener('click',function(event){
+            event.stopPropagation()   
+        })
+    </script>
+</body>
+</html>
