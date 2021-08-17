@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -103,20 +103,20 @@
                     <div class="header-search">
                         <div class="header-search-controll">
                             <input type="text" class="search-input" placeholder="Search..." tabindex="-1"> 
+                            <div class="header-search-history">
+                                <ul class="history-list">
+                                    <li class="history-item">
+                                        <a href="">Thịt chó giả cầy</a>
+                                    </li>
+                                    <li class="history-item">
+                                        <a href="">Trà sữa trân châu đường đen</a>
+                                    </li>
+                                    <li class="history-item">
+                                        <a href="">Phóng lợn</a>
+                                    </li>
+                                </ul>
+                            </div>
                             <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> 
-                        </div>
-                        <div class="header-search-history">
-                            <ul class="history-list">
-                                <li class="history-item">
-                                    <a href="">History search item 1</a>
-                                </li>
-                                <li class="history-item">
-                                    <a href="">History search item 2</a>
-                                </li>
-                                <li class="history-item">
-                                    <a href="">History search item 3</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                     <div class="shopping-cart">
@@ -191,7 +191,51 @@
 
         </div>
         <div class="container">
-
+            <div class="grid">
+                <div class="hero">
+                    <div class="hero__categories">
+                        <h3>DANH MỤC</h3>
+                        <ul class="hero__categories__list">
+                            <li>
+                                <a href="">Tất Cả Sản Phẩm <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Quần Áo <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Gia dụng <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Đồ Chơi <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Skin Care <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Điện Tử <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Dịch Cụ <i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hero__slider">
+                        <a href="" class="hero__slider__item"><img src="/assets/img/products/slider_1.jpg" alt="img" width="100%" height="402px"></a>
+                        <a href="" class="hero__slider__item"><img src="/assets/img/products/slider_2.jpg" alt="img" width="100%" height="402px"></a>
+                        <a href="" class="hero__slider__item"><img src="/assets/img/products/slider_3.jpg" alt="img" width="100%" height="402px"></a>
+                        <button class="slide-btn slide-btn--left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slide-btn slide-btn--right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="hero__image">
+                        <img src="/assets/img/products/product_1.jpg" alt="img" width="100%">
+                        <img src="/assets/img/products/product_2.jpg" alt="img" width="100%">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
 
@@ -302,6 +346,45 @@
         modal_container.addEventListener('click',function(event){
             event.stopPropagation()   
         })
+    </script>
+    <!-- slideshow -->
+    <script>
+        var num_slide=3;
+        var slider_index_in=0;
+        var slider_index_out=2;
+        const slider_list = document.querySelectorAll('.hero__slider__item')
+        function slideshow(slider_index_in,slider_index_out) {
+            const slide_btn_left=document.querySelector('.slide-btn--left')
+            const slide_btn_right=document.querySelector('.slide-btn--right')
+            slider_list[slider_index_in].classList.add('active')
+            slider_list[slider_index_out].classList.add('slide-out')
+            var slide_timing=setTimeout(function() {
+                console.log('b')
+                slider_list[slider_index_out].classList.remove('slide-out')
+                slider_list[slider_index_out].classList.remove('active')
+            }, 500);
+            var slide_delay=setTimeout(function() {
+                console.log('a')
+                if(slider_index_in==num_slide-1){slider_index_in=0}
+                else{slider_index_in++}
+                if(slider_index_out==num_slide-1){slider_index_out=0}
+                else{slider_index_out++}
+                slideshow(slider_index_in,slider_index_out)
+            }, 5000);
+            console.log('1')
+        }
+        slideshow(slider_index_in,slider_index_out)
+        // slide_btn_right.addEventListener('click',function () {
+        //     console.log('asas')
+        //     clearTimeout(slide_delay)
+        //     if(slider_index_in==num_slide-1){slider_index_in=0}
+        //     else{slider_index_in++}
+        //     if(slider_index_out==num_slide-1){slider_index_out=0}
+        //     else{slider_index_out++}
+        //     slideshow(slider_index_in,slider_index_out);
+        // })
+
+        
     </script>
 </body>
 </html>
