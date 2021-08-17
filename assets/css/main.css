@@ -103,6 +103,7 @@
 }
 .header__cart {
     /* display: none; */
+    z-index: 99;
     position: absolute;
     right: -12px;
     top: 116%;
@@ -622,6 +623,9 @@
     margin-top: 24px;
     font-size: 14px;
     font-weight: 400;
+}
+.hero__categories__list:hover{
+    color: #fe6141;
 }
 .hero__categories__list li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
